@@ -1,0 +1,26 @@
+VERTICAL PARTITIONING PIPELINE RESULTS
+==================================================
+
+VERTICAL PARTITIONING PIPELINE RESULTS SUMMARY
+
+Best Performing Model: user_behavior_model
+- R² Score: -0.1048
+- MAE: 53.2056
+- RMSE: 59.6535
+
+Model Performance Comparison:
+- infrastructure_model: R²=-0.7200, MAE=62.5552, RMSE=74.4316
+- user_behavior_model: R²=-0.1048, MAE=53.2056, RMSE=59.6535
+- fusion_model: R²=-0.3343, MAE=56.2877, RMSE=65.5567
+- monolithic_model: R²=-0.5601, MAE=60.3377, RMSE=70.8867
+
+Interpretation: Model performance needs improvement (R² < 0.4)
+
+Vertical Partitioning Analysis: Individual models perform better than fusion, suggesting potential overfitting or suboptimal fusion strategy.
+
+DETAILED RESULTS:
+               Model       MAE      RMSE        R²       MAPE
+ user_behavior_model 53.205574 59.653534 -0.104826 114.818990
+        fusion_model 56.287653 65.556716 -0.334307 140.995536
+    monolithic_model 60.337710 70.886726 -0.560096 144.185500
+infrastructure_model 62.555247 74.431612 -0.720031 164.302528
