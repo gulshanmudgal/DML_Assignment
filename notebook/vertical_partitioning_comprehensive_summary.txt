@@ -1,0 +1,20 @@
+COMPREHENSIVE VERTICAL PARTITIONING ANALYSIS RESULTS
+============================================================
+
+Best Performing Model: User Behavior Model (B)
+R² Score: -0.1048
+MAE: 53.2056 ms
+RMSE: 59.6535 ms
+
+DETAILED RESULTS:
+                   Model       MAE      RMSE        R²       MAPE
+ User Behavior Model (B) 53.205574 59.653534 -0.104826 114.818990
+   Fusion (Weighted Avg) 56.287653 65.556716 -0.334307 140.995536
+     Monolithic Baseline 60.337710 70.886726 -0.560096 144.185500
+Infrastructure Model (A) 62.555247 74.431612 -0.720031 164.302528
+   Fusion (Meta-learner) 64.913391 77.703694 -0.874583 169.609088
+
+KEY INSIGHTS:
+- User Behavior features are more predictive
+- Fusion strategy: Weighted Average is optimal
+- Vertical partitioning outperforms monolithic approach

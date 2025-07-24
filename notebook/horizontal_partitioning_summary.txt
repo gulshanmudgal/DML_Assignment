@@ -1,0 +1,33 @@
+HORIZONTAL PARTITIONING PIPELINE RESULTS
+==================================================
+
+
+HORIZONTAL PARTITIONING PIPELINE RESULTS SUMMARY
+
+Best Performing Model: global_model_rural
+- R² Score: -0.0716
+- MAE: 45.7810 ms
+- RMSE: 57.4290 ms
+- Test Samples: 9
+
+Model Performance Comparison:
+- urban_model: R²=-0.2597, MAE=67.4558, RMSE=74.3523
+- rural_model: R²=-0.5094, MAE=56.5988, RMSE=68.1572
+- global_model: R²=-0.2902, MAE=61.2826, RMSE=70.2770
+- global_model_urban: R²=-0.4313, MAE=73.9657, RMSE=79.2546
+- global_model_rural: R²=-0.0716, MAE=45.7810, RMSE=57.4290
+
+Interpretation: Model performance needs improvement (R² < 0.4)
+
+Horizontal Partitioning Analysis:
+- Urban specialized model outperforms global model on urban data (R² improvement: 39.8%)
+- Global model performs better than rural specialized model on rural data
+- Horizontal partitioning shows limited benefit: Global model (R²=-0.2902) performs similarly to specialized models (avg R²=-0.3846)
+
+DETAILED RESULTS:
+             Model       MAE      RMSE        R²       MAPE  Sample_Size
+global_model_rural 45.781029 57.429003 -0.071647 145.838009            9
+       urban_model 67.455809 74.352294 -0.259676 254.784220           11
+      global_model 61.282586 70.276958 -0.290214 217.011756           20
+global_model_urban 73.965679 79.254597 -0.431261 275.244821           11
+       rural_model 56.598804 68.157191 -0.509428 157.555301            9
